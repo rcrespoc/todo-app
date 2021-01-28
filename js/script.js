@@ -16,10 +16,11 @@ btnCheck = Array.from(d.querySelectorAll('.success')),
 btnClose = Array.from(d.querySelectorAll('.to-do > img')),
 darkTheme = false;
 
-new Sortable(listToDoItems, {
-  animation: 150,
-});
-
+if(window.devicePixelRatio === 1){
+  new Sortable(listToDoItems, {
+    animation: 150,
+  });
+}
 d.addEventListener('DOMContentLoaded', () => {
   obtenerModoTema();
   obtenerTareasLocalStorage();
@@ -122,8 +123,7 @@ function ingresarTarea(tarea, hecha) {
   btnClose.push(img);
   itemsTitle.push(h6);
   listToDo.push(sectionToDo);
-  if(window.devicePixelRatio < 2) { divSuccess.addEventListener('click', e => chequearActividadCumplida(divSuccess)); }
-  else{ divSuccess.addEventListener('touchstart', e => chequearActividadCumplida(divSuccess)); }
+  divSuccess.addEventListener('click', e => chequearActividadCumplida(divSuccess));
   img.addEventListener('click', e => botonEliminarActividad(img));
   
   // PEGANDOLE AL DOM
