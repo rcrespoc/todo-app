@@ -16,15 +16,12 @@ btnCheck = Array.from(d.querySelectorAll('.success')),
 btnClose = Array.from(d.querySelectorAll('.to-do > img')),
 darkTheme = false;
 
-if(window.devicePixelRatio === 1){
-  new Sortable(listToDoItems, {
-    animation: 150,
-  });
-}
+
 d.addEventListener('DOMContentLoaded', () => {
   obtenerModoTema();
   obtenerTareasLocalStorage();
   actualizarRemainItemsLeft();
+  obtenerPixelRatio();
 });
 
 btnClearAll.addEventListener('click', limpiarToDo);
@@ -221,3 +218,12 @@ function obtenerTareasLocalStorage() {
 }
 
 const activarOpcionAll = () => d.querySelector('#radio1').checked = true;
+
+function obtenerPixelRatio() {
+  if(devicePixelRatio === 1){
+    console.log(window.devicePixelRatio);
+    new Sortable(listToDoItems, {
+      animation: 150,
+    });
+  }
+}
