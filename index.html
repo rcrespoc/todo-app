@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <link rel='stylesheet' href='css/amc.css'>
+  <link rel='stylesheet' href='css/style.css'>
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body data-dark-mode class="flex column">
+  <header data-dark-mode class="header-page py-2 px-2 flex">
+    <div class="container-desktop flex">
+      <a href="#">TODO</a>
+      <button class="dark-mode-btn">
+        <img src="images/icon-moon.svg" alt="Dark Mode">
+        <img src="images/icon-sun.svg" class="none" alt="Light Mode">
+      </button> <!-- BOTON -->
+      <form  class="new-item">
+        <input data-dark-second type="text" autocomplete="off" name="new" id="new" class="p-1 pl-3" placeholder="Create a new todo..." required>
+        <input type="submit" class="none" value="">
+      </form>
+    </div>
+  </header> <!-- HEADER -->
+  <main data-dark-mode> 
+    <div class="container">
+      <div data-dark-second class="list-to-do">
+        <div class="list-to-do-items" id="drop-items">
+          
+        </div>
+        <div data-dark-second class="item-left flex p-1 opacity-5">
+          <small id="items-left">0 items left</small>
+          <button data-dark-second class="clear-items">
+            Clear Completed
+          </button>
+        </div> <!-- ITEMS LEFT -->
+      </div> <!-- TO DO LIST -->
+      <div data-dark-second class="to-do-menu flex bg-white-1 p-1 px-3">
+        <input type="radio" name="radiocheck" id="radio1" checked>
+        <label for="radio1">All</label>
+        <input type="radio" name="radiocheck" id="radio2">
+        <label for="radio2">Active</label>
+        <input type="radio" name="radiocheck" id="radio3">
+        <label for="radio3">Completed</label>
+      </div>
+    </div>
+  </main> <!-- MAIN CONTENT -->
+  <div data-dark-second class="attribution py-1 text-center">
+    Challenge by <a data-dark-second href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>. <br>
+    Coded by <a data-dark-second href="https://github.com/rcrespoc/" target="_blank" rel="noopener noreferrer">Richard Crespo</a>.
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
