@@ -122,7 +122,7 @@ function ingresarTarea(tarea, hecha) {
   btnClose.push(img);
   itemsTitle.push(h6);
   listToDo.push(sectionToDo);
-  if(window.devicePixelRatio < 1) { divSuccess.addEventListener('click', e => chequearActividadCumplida(divSuccess)); }
+  if(window.devicePixelRatio < 2) { divSuccess.addEventListener('click', e => chequearActividadCumplida(divSuccess)); }
   else{ divSuccess.addEventListener('touchstart', e => chequearActividadCumplida(divSuccess)); }
   img.addEventListener('click', e => botonEliminarActividad(img));
   
